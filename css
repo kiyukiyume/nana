@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* settings */
+:root {
+
+  /* nana.css */
+  --miya-logo: url("https://i.imgur.com/jcswLg4.png");
+  --miya-logo-rounding: 0px;
+  --miya-logo-scale: 1.25;
+  --miya-logo-hover: scale(1.5) rotate(5deg);
+  --miya-font: 'Poppins', Overpass, sans-serif;
+  --color-background: rgba(14,9,11);
+  --color-foreground: rgba(8,9,21);
+  --nana-color: rgba(31,35,90);
+  --gradient1: rgba(14,16,41);
+  --gradient2: rgba(49,55,132);
+  --gradient3: rgba(68,82,191);
+  --gradienttext: rgba(216,216,216)
+  --color-text: rgba(216,216,216);
+  --cp-accent-color: 49,55,132;
+  --cp-accent-color-dim: 68,82,191;
+  /* saiko */
+  --saiko-animation-normal: 1s;
+  --saiko-animation-fast: 0.5s;
+  --saiko-transition-normal: 1s;
+  --saiko-transition-fast: 0.5s;
+  --saiko-transition-faster: 0.2s;
+  --saiko-transition-slow: 2s;
+}
+
+/* code */
+.overview > div > .about > .content-wrap {
+  max-height: unset;
+}
+#app,
+#app .links,
+#app .header-wrap,
+#app .section-header,
+#app .load-more,
+#app .list-stats,
+#app textarea,
+#app .dropdown,
+#app .button{
+  font-family: var(--miya-font);
+}
+.milestone {
+  font-family: Poppins,sans-serif;
+}
+.overview > div > div > .section-header {
+  font-weight: 700;
+}
+
+/* change color display */
+#app .gray {
+    --color-blue: 109,123,227
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, rgba(14,16,41), rgba(49,55,132), rgba(68,82,191));
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(to bottom, rgba(14,16,41), rgba(49,55,132), rgba(68,82,191));
+}
+
+body {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: rgba(216,216,216);
+    background-color: rgb(var(--color-background));
+    line-height: 160%;
+    word-wrap: break-word;
+    letter-spacing: 0.04em;
+    margin: 0;
+    padding: 0;
+}
+.section > .about .content-wrap {
+    max-height: none !important;
+    background: #080915;
+    border-radius: 10px;
+}
+/* navbar 1 */
+.wrap>.footer{
+   display: none !important;
+}
+.overview > .section:nth-of-type(2) {
+    width: 600px !important;
+}
+.banner-content > .follower-badge {
+  position: absolute;
+  top: 300px;
+  margin: 0;
+  padding: 11.5px 10px;
+}
+.banner-content > .following-badge {
+  position: absolute;
+  top: 300px;
+  margin: 0;
+  padding: 11.5px 10px;
+}
+/* banner + avatar + user */
+.banner {
+  visibility: hidden;
+}
+.banner > .container {
+  visibility: visible;
+  justify-content: center;
+}
+.banner .container {
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    text-align: center;
+    padding: 1.5em;
+    border-radius: 5px 5px;
+    top: 100px;
+    margin-left:20px;
+    z-index: 1001;
+}
+.banner-content > .name-wrapper > .name {
+    bottom: 300px;
+    right: 150px;
+    padding: 9px 45px 3px 45px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(14,16,41), rgba(49,55,132), rgba(68,82,191));
+    text-shadow: 0 0 10px;
+    box-shadow: 1px 1px 5px 1px #050611;
+    z-index: 110;
+    position: absolute;
+    font-size: 2em;
+    font-weight:800;
+    letter-spacing: 0.06em;
+    line-height: 145%;
+    font-weight: bold;
+}
+.banner-content:hover > .name-wrapper > .name {
+    color: #4452bf;
+}
+.container > .banner-content > .avatar {
+    background-color: rgba(var(--color-background));
+    margin-bottom: 1.5em;
+    margin-top: 20px;
+    border-radius: 5px 5px;
+    box-shadow:1px 1px 5px 1px #050611;
+    position: absolute;
+    bottom: 100px;
+}
+
+/* navbar 2 */
+.header-wrap .nav-wrap {
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    bottom: 255px;
+    right: 880px;
+    width: 450px;
+}
+.nav.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 3px 0px 3px 0px;
+    background: linear-gradient(to bottom, rgba(14,16,41), rgba(49,55,132), rgba(68,82,191));
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px #050611;
+}
+.header-wrap .nav-wrap .nav .link {
+    font-size: 1em;
+    color: #d8d8d8;
+    text-shadow: 0 0 10px;
+    
+}
+.header-wrap .nav-wrap .nav .link:hover {
+    color: #4452bf;
+}
+.header-wrap .nav-wrap .nav .link {
+    position:relative;
+    width:60px;
+    background: none;
+    border-right:1px solid
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index:10000000000000000000001;
+}
+
+/* hides reviews + submissions */
+.nav .link:nth-child(7), .nav .link:nth-child(8) {
+  width: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+
+/* navbar links */
+.nav-wrap > .nav.container > .link:nth-child(1) {
+  font-size: 0;
+}
+.nav-wrap > .nav.container > .link:nth-child(1)::before {
+  content: "\f015";
+  font-family: FontAwesome;
+  font-size: 20px;
+}
+.nav-wrap > .nav.container > .link:nth-child(2) {
+  font-size: 0;
+}
+.nav-wrap > .nav.container > .link:nth-child(2)::before {
+  content: "\f186";
+  font-family: FontAwesome;
+  font-size: 20px;
+}
+.nav-wrap > .nav.container > .link:nth-child(3) {
+  font-size: 0;
+}
+.nav-wrap > .nav.container > .link:nth-child(3)::before {
+  content: "\f005";
+  font-family: FontAwesome;
+  font-size: 20px;
+}
+.nav-wrap > .nav.container > .link:nth-child(4) {
+  font-size: 0;
+}
+.nav-wrap > .nav.container > .link:nth-child(4)::before {
+  content: "\f004";
+  font-family: FontAwesome;
+  font-size: 20px;
+}
+.nav-wrap > .nav.container > .link:nth-child(5) {
+  font-size: 0;
+}
+.nav-wrap > .nav.container > .link:nth-child(5)::before {
+  content: "\f06c";
+  font-family: FontAwesome;
+  font-size: 20px;
+}
+.nav-wrap > .nav.container > .link:nth-child(6) {
+  font-size: 0;
+}
+.nav-wrap > .nav.container > .link:nth-child(6)::before {
+  content: "\f0c0";
+  font-family: FontAwesome;
+  font-size: 20px;
+}
+
+/* load more */
+.scroller > .load-more {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background: linear-gradient(to left, rgba(14,16,41), rgba(49,55,132), rgba(68,82,191));
+    text-shadow: 0 0 10px;
+}
+.scroller > .load-more:hover {
+    color: #4452bf;
+}
+
+/* saiko's transition users like */
+.action.likes:hover .action.likes .users {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    transition: 0.3s;
+}
+.action.likes .users {
+    animation: fadeInRight;
+    animation-duration: 0.5s;
+    transition: 0.5s;
+    background: none !important;
+}
+.action.likes .users > a {
+    border-radius: 50%;
+    filter: saturate(0.3);
+}
+.action.likes .users > a:hover {
+    filter: hue-rotate(340deg);
+    transition: 0.3s;
+    transform: scale(0.91);
+    border: 1px solid #4452bf;
+    box-shadow: 0 0 5px #d8d8d8;
+    text-shadow: 0 0 5px #d8d8d8;
+}
+
+/* like heart */
+.button.liked > svg {
+    text-shadow: 0 0 0 #d8d8d8; 
+}
+.action.likes .button.liked,
+.like-wrap.thread_comment .button.liked {
+    color: #4452bf;
+}
+.action.likes .button:hover,
+.like-wrap.thread_comment .button:hover{
+    color: #4452bf;
+}
+
+/* SAIKO'S ANIMATIONS */
+.activity-entry {
+    animation: zoomIn;
+    animation-duration: var(--saiko-animation-fast);
+}
+
+.overview,
+.input,
+.stats-wrap {
+    animation: fadeInRight;
+    animation-duration: var(--saiko-animation-fast);
+}
+
+.page-content > div 
+> div.content.container > div
+> div:nth-child(1) {
+    animation: fadeInLeft;
+    animation-duration: var(--saiko-animation-fast);
+    animation-iteration-count: 1;
+}
+
+.about p:nth-child(16) > a:nth-child(2)::after {
+   animation: fadeInBottomLeft;
+   animation-duration: var(--saiko-animation-normal);
+}
+
+.reply {
+    animation: fadeInRight;
+    animation-duration: var(--saiko-animation-fast);
+}
+
+.header-wrap .actions .nav-btn:hover,
+.banner-content h1.name:hover,
+.header-wrap > div.banner > div.container > div > img:hover {
+    transform: scale(1.05);
+    transition: var(--saiko-transition-normal);
+}
+
+.banner-content h1.name,
+.header-wrap > div.banner > div.container > div > img {
+    transition: var(--saiko-transition-normal);
+}
+
+.button.liked > svg {
+    animation: rubberBand;
+    animation-duration: var(--saiko-animation-normal);
+}
+
+.medialist.cards .entry-card {
+    animation: zoomIn;
+    animation-duration: var(--saiko-animation-normal);
+}
+
+.progress .bar {
+    animation: slideInLeft;
+    animation-duration: var(--saiko-transition-slow);
+}
